@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+@layer utilities {
+  .animate-spin-slow {
+    animation: spin 3s linear infinite, pulse 3s ease-in-out infinite;
+  }
+}
+
+/* Add this inside your global CSS file */
+.img-fade-bottom {
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
+
 @keyframes slideDown {
   from {
     opacity: 0;

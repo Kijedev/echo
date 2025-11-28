@@ -10,7 +10,7 @@ const Navbar = () => {
       <header className="fixed top-0 left-0 right-0 w-full flex justify-center pt-4 z-50">
         <nav
           className="
-            w-[90%] max-w-7xl
+            w-[90%]
             flex items-center justify-between
             px-6 py-4 rounded-2xl
             bg-white/5 border border-white/20
