@@ -34,17 +34,20 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* HERO IMAGE - On top */}
-          <img
-            src={HeroImage}
-            alt="Hero"
-            className="img-fade-bottom relative z-10 w-[300px] lg:w-full drop-shadow-2xl"
-          />
+          <div>
+            <img
+              src={HeroImage}
+              alt="Hero"
+              className="img-fade-bottom relative z-100 w-[300px] lg:w-full drop-shadow-2xl"
+            />
+          </div>
         </div>
       </div>
 
       <div className="flex flex-col justify-center items-center gap-8 text-center px-4 sm:px-8 lg:px-32 pb-12 relative z-10">
-        <h1 className="font-extrabold leading-28 text-[4rem] lg:text-[6rem] bg-linear-to-b from-[#FFFFFF] to-[#8F9092] bg-clip-text text-transparent">The Hottest Tracks of the Week: Only on Echo</h1>
+        <h1 className="font-extrabold leading-28 text-[4rem] lg:text-[6rem] bg-linear-to-b from-[#FFFFFF] to-[#8F9092] bg-clip-text text-transparent">
+          The Hottest Tracks of the Week: Only on Echo
+        </h1>
         <p className="text-[#8F9092] max-w-xl text-lg leading-8">
           Say goodbye to interruptions and enjoy uninterrupted music streaming.
           With our ad-free platform, you’ll have access to millions of songs

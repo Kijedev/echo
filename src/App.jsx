@@ -4,12 +4,14 @@ import Navbar from "./components/Navbar";
 import Trending from "./components/Trending";
 import Ariavan from "./components/Ariavan";
 import Hero from "./components/Hero";
+import Carousel from "./components/Carousel";
 
 const App = () => {
   return (
     <div className="bg-[#0A0C10]">
       <Navbar />
       <Hero />
+      <Carousel />
       <Trending />
       <Ariavan />
       <Footer />

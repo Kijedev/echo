@@ -2,7 +2,7 @@
 
 @layer utilities {
   .animate-spin-slow {
-    animation: spin 3s linear infinite, pulse 3s ease-in-out infinite;
+    animation: spin 2s linear infinite, pulse 2s ease-in-out infinite;
   }
 }
 
