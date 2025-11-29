@@ -1,5 +1,5 @@
 import React from "react";
-import Woman from "../Img/woman.svg";
+import Woman from "../Img/woman.png";
 import { FaPlay } from "react-icons/fa";
 import Image1 from "../Img/image1.png";
 import Image2 from "../Img/image2.png";
@@ -10,32 +10,31 @@ import Image6 from "../Img/image6.png";
 
 const Ariavan = () => {
   return (
-    <section className="relative w-full min-h-screen px-6 md:px-12 bg-linear-to-b from-[#0A0C10] to-transparent overflow-hidden flex items-center py-[25%]">
-      <div className="bg-[#0A0C10] w-[400px] h-[500px] relative top-0 blur-[200px]"></div>
+    <section className="relative w-full min-h-screen px-4 sm:px-6 md:px-8 lg:px-12 bg-linear-to-b from-[#0A0C10] to-transparent overflow-hidden flex items-center py-12 sm:py-16 lg:py-[25%]">
+      {/* Background blur - hidden on mobile */}
+      <div className="hidden lg:block bg-[#0A0C10] w-[400px] h-[500px] relative top-0 blur-[200px]"></div>
+
       {/* ===== Background Gradient Blobs ===== */}
       <div className="absolute top-72 left-0 w-[600px] h-[600px] bg-[#801F60] blur-[140px] rounded-full"></div>
       <div className="absolute bottom-72 right-0 w-[700px] h-[700px] bg-blue-600/40 blur-[140px] rounded-full"></div>
 
       {/* ===== Main Content Row ===== */}
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-3 items-center w-full max-w-[1400px] mx-auto">
+      <div className="relative z-10 flex flex-col lg:grid lg:grid-cols-3 items-center w-full max-w-[1400px] mx-auto gap-8 lg:gap-0">
         {/* ---------- LEFT: Artist Text ---------- */}
-        <div className="text-white space-y-6 absolute z-50 left-[-20%]">
-          <h1 className="text-5xl md:text-[6rem] font-extrabold leading-20">
+        <div className="text-white space-y-4 sm:space-y-6 text-center lg:text-left lg:absolute lg:left-[-20%] lg:z-50">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[6rem] font-extrabold leading-tight lg:leading-20">
             Aria Van <br /> Rose
           </h1>
 
-          <p className="text-slate-300 max-w-md leading-relaxed">
+          <p className="text-slate-300 text-sm sm:text-base max-w-md leading-relaxed mx-auto lg:mx-0">
             Aria Van Rose is a rising star in the music industry captivating
             audiences with her powerful vocals and emotive performances.
           </p>
         </div>
 
         {/* ---------- CENTER: Artist Image ---------- */}
-        <div className="absolute left-[10%] flex justify-center">
-          <div
-            className="w-[300px] md:w-[420px] lg:w-[550px] rounded-2xl overflow-hidden bg-linear-to-b from-gray-800 via-transparent
-           to-transparent backdrop-blur-xl border border-white/20"
-          >
+        <div className="w-full flex justify-center lg:absolute lg:left-[-15%]">
+          <div className="w-[250px] sm:w-[320px] md:w-[400px] lg:w-[550px] h-auto rounded-2xl overflow-hidden bg-linear-to-b from-gray-800 via-transparent to-transparent backdrop-blur-xl border border-white/20">
             <img
               src={Woman}
               alt="Aria Van Rose"
@@ -45,17 +44,19 @@ const Ariavan = () => {
         </div>
 
         {/* ---------- RIGHT: Song List Card ---------- */}
-        <div className="absolute right-[10%] bg-white/5 p-6 rounded-2xl backdrop-blur-xl border border-white/20 shadow-xl w-full max-w-md mx-auto">
+        <div className="bg-white/5 p-4 sm:p-6 rounded-2xl backdrop-blur-xl border border-white/20 shadow-xl w-full max-w-md mx-auto lg:absolute lg:right-[10%] lg:max-w-md">
           {/* Header */}
           <div className="flex justify-between items-center mb-5">
-            <h3 className="text-white font-semibold text-lg">Latest Songs</h3>
-            <button className="text-slate-400 text-sm hover:text-cyan-400">
+            <h3 className="text-white font-semibold text-base sm:text-lg">
+              Latest Songs
+            </h3>
+            <button className="text-slate-400 text-xs sm:text-sm hover:text-cyan-400">
               View all
             </button>
           </div>
 
           {/* Song List */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {[
               { title: "Echoes Of Yesterday", img: Image1, time: "2:56" },
               { title: "Chasing Dreams", img: Image2, time: "3:49" },
@@ -66,23 +67,29 @@ const Ariavan = () => {
             ].map((song, idx) => (
               <div key={idx} className="flex items-center justify-between">
                 {/* Song Info */}
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2 sm:gap-4 flex-1">
                   <img
                     src={song.img}
-                    className="w-12 h-12 rounded-lg object-cover"
+                    className="w-10 sm:w-12 h-10 sm:h-12 rounded-lg object-cover shrink-0"
                     alt=""
                   />
-                  <div>
-                    <p className="text-white font-medium">{song.title}</p>
-                    <p className="text-slate-400 text-sm">Aria Van Rose</p>
+                  <div className="min-w-0">
+                    <p className="text-white font-medium text-sm sm:text-base truncate">
+                      {song.title}
+                    </p>
+                    <p className="text-slate-400 text-xs sm:text-sm">
+                      Aria Van Rose
+                    </p>
                   </div>
                 </div>
 
                 {/* Duration + Play Button */}
-                <div className="flex items-center gap-3">
-                  <span className="text-slate-400 text-sm">{song.time}</span>
-                  <button className="w-8 h-8 rounded-full bg-white flex items-center justify-center hover:scale-110 transition">
-                    <FaPlay className="text-sm" />
+                <div className="flex items-center gap-2 sm:gap-3 shrink-0 ml-2">
+                  <span className="text-slate-400 text-xs sm:text-sm whitespace-nowrap">
+                    {song.time}
+                  </span>
+                  <button className="w-7 sm:w-8 h-7 sm:h-8 rounded-full bg-white flex items-center justify-center hover:scale-110 transition shrink-0">
+                    <FaPlay className="text-xs sm:text-sm" />
                   </button>
                 </div>
               </div>

@@ -15,7 +15,7 @@ const AppleCardsCarouselDemo = () => {
   ));
 
   return (
-    <div className="w-full h-full py-20">
+    <div className="w-full h-full py-10">
       <div className="flex flex-col gap-5 lg:pl-32 px-5">
         <h1 className="lg:text-[5rem] text-[2rem] lg:leading-20 leading-10 font-extrabold bg-linear-to-b from-[#FFFFFF] to-[#8F9092] bg-clip-text text-transparent">
           Explore Endless <br /> Music Libraries

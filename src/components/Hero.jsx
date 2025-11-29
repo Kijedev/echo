@@ -1,5 +1,5 @@
 import React from "react";
-import HeroImage from "../img/heroimg.svg";
+import HeroImage from "../img/heroimg.png";
 import SpinBg from "../img/spin.png";
 
 const Hero = () => {
@@ -42,16 +42,6 @@ const Hero = () => {
             />
           </div>
         </div>
-      </div>
-
-      <div className="flex flex-col justify-center items-center lg:gap-8 gap-4 text-center px-4 sm:px-8 lg:px-32 pb-12 relative z-10">
-        <h1 className="font-extrabold lg:leading-28 text-[2rem] lg:text-[6rem] bg-linear-to-b from-[#FFFFFF] to-[#8F9092] bg-clip-text text-transparent">
-          The Hottest Tracks of the Week: Only on Echo
-        </h1>
-        <p className="text-[#8F9092] max-w-xl text-lg leading-8">
-          Say goodbye to interruptions and enjoy uninterrupted music streaming.
-          With our ad-free platform, you’ll have access to millions of songs
-        </p>
       </div>
     </section>
   );

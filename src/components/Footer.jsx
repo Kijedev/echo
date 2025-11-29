@@ -10,11 +10,11 @@ const Footer = () => {
     <footer className="bg-[#0A0C10] pt-20 pb-10 px-5">
       <FooterCard />
       <section className="flex flex-col lg:flex-row justify-around text-white mt-20">
-        <div>
+        <div className="lg:ml-0 -ml-5">
           <img src={Logo} alt="Logo" />
         </div>
 
-        <div className="flex flex-col lg:flex-row justify-around gap-20">
+        <div className="flex flex-col lg:flex-row justify-around lg:gap-20 gap-5">
           <ul className="text-[#D8D8D8] text-sm flex flex-col gap-3">
             <p className="text-[#7D7E80] mb-4">Get started</p>
             <li>
@@ -68,8 +68,8 @@ const Footer = () => {
         </div>
       </section>
 
-      <section className="mt-20">
-        <div className="flex flex-col lg:flex-row justify-center lg:gap-20 gap-10 items-center py-8">
+      <section className="lg:mt-20">
+        <div className="flex flex-col lg:flex-row lg:justify-center justify-left lg:gap-20 gap-10 py-8">
           <p className="text-sm text-[#7D7E80]">
             Say goodbye to interruptions and enjoy uninterrupted music
             streaming.
@@ -84,7 +84,7 @@ const Footer = () => {
 
         <hr className="mx-auto max-w-3xl text-[#7D7E80]" />
 
-        <div className="flex flex-col lg:flex-row justify-center gap-10 py-8 text-[#7D7E80] text-sm">
+        <div className="flex justify-center lg:gap-10 gap-2 py-8 text-[#7D7E80] text-sm">
           <p>2025 echo</p>
           <p>Cookie settings</p>
           <p>Terms and conditions</p>

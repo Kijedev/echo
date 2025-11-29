@@ -1,9 +1,9 @@
 "use client";
-import Artist1 from "../Img/Artist 1.svg";
-import Artist2 from "../Img/Artist 2.svg";
-import Artist3 from "../Img/Artist 3.svg";
-import Artist4 from "../Img/Artist 4.svg";
-import Artist5 from "../Img/Artist 5.svg";
+import Artist1 from "../Img/Artist 1.png";
+import Artist2 from "../Img/Artist 2.png";
+import Artist3 from "../Img/Artist 3.png";
+import Artist4 from "../Img/Artist 4.png";
+import Artist5 from "../Img/Artist 5.png";
 
 export default function Home() {
   const artists = [
@@ -35,7 +35,7 @@ export default function Home() {
           {artists.map((artist) => (
             <div
               key={artist.id}
-              className={`group cursor-pointer transition-transform ease-in-out duration-300 hover:scale-105 rounded-2xl p-4 sm:p-6 lg:p-8 bg-white/5 border border-gray-800 backdrop-blur-2xl ${
+              className={`group cursor-pointer transition-transform ease-in-out duration-300 hover:translate-y-8 rounded-2xl p-4 sm:p-6 lg:p-8 bg-white/5 border border-white/10 backdrop-blur-2xl ${
                 artist.id === 1 || artist.id === 3 || artist.id === 5
                   ? "lg:-translate-y-16"
                   : ""

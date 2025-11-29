@@ -57,7 +57,7 @@ const Navbar = () => {
         {open && (
           <div
             className="
-              w-[90%] max-w-5xl
+              w-[90%] max-w-5xl mt-5
               bg-white/10 border border-white/20 backdrop-blur-xl
               rounded-xl px-6 py-4
               text-gray-200 space-y-4
