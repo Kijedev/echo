@@ -3,7 +3,7 @@ import Headphones from "../Img/headphones.svg";
 
 const FooterCard = () => {
   return (
-    <div className="w-full flex justify-center items-center py-6 sm:py-10">
+    <div className="w-full flex justify-center items-center py-6 sm:py-10 bg-linear-to-b from-[#0A0C10] to-transparent">
       <div className="bg-linear-to-b from-[#872064] via-[#441537] to-transparent relative w-[95%] sm:w-[90%] max-w-6xl rounded-lg sm:rounded-2xl lg:rounded-[30px] overflow-hidden flex flex-col lg:flex-row items-center justify-between px-4 sm:px-8 lg:px-16 py-8 sm:py-12 lg:py-20 gap-6 sm:gap-8 lg:gap-0">
         {/* Left Text Section */}
         <div className="w-full lg:w-auto max-w-xl">

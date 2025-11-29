@@ -2,6 +2,12 @@
 
 import React from "react";
 import { Carousel, Card } from "../components/ui/apple-cards-carousel";
+import MusicCover1 from "../Img/MusicCover1.svg";
+import MusicCover2 from "../Img/MusicCover2.svg";
+import MusicCover3 from "../Img/MusicCover3.svg";
+import MusicCover4 from "../Img/MusicCover4.svg";
+import MusicCover5 from "../Img/MusicCover5.jpeg";
+import MusicCover6 from "../Img/MusicCover6.jpeg";
 
 const AppleCardsCarouselDemo = () => {
   const cards = data.map((card, index) => (
@@ -10,8 +16,8 @@ const AppleCardsCarouselDemo = () => {
 
   return (
     <div className="w-full h-full py-20">
-      <div className="flex flex-col gap-5 pl-32">
-        <h1 className="lg:text-[5rem] text-[3rem] leading-20 font-extrabold bg-linear-to-b from-[#FFFFFF] to-[#8F9092] bg-clip-text text-transparent">
+      <div className="flex flex-col gap-5 lg:pl-32 px-5">
+        <h1 className="lg:text-[5rem] text-[2rem] lg:leading-20 leading-10 font-extrabold bg-linear-to-b from-[#FFFFFF] to-[#8F9092] bg-clip-text text-transparent">
           Explore Endless <br /> Music Libraries
         </h1>
         <p className="text-[#7D7E80] max-w-2xl">
@@ -24,75 +30,122 @@ const AppleCardsCarouselDemo = () => {
   );
 };
 
-const DummyContent = () => {
+const DummyContent = ({ title, category, description, image }) => {
+  // Render a content panel tailored to the clicked card
   return (
-    <>
-      {[...new Array(3).fill(1)].map((_, index) => {
-        return (
-          <div
-            key={"dummy-content" + index}
-            className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
-          >
-            <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
-              <span className="font-bold text-neutral-700 dark:text-neutral-200">
-                The first rule of Apple club is that you boast about Apple club.
-              </span>{" "}
-              Keep a journal, quickly jot down a grocery list, and take amazing
-              class notes. Want to convert those notes to text? No problem.
-              Langotiya jeetu ka mara hua yaar is ready to capture every
-              thought.
-            </p>
-            <img
-              src="https://assets.aceternity.com/macbook.png"
-              alt="Macbook mockup from Aceternity UI"
-              height="500"
-              width="500"
-              className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
-            />
-          </div>
-        );
-      })}
-    </>
+    <div className="bg-[#F5F5F7] dark:bg-black/50 p-6 md:p-14 rounded-3xl mb-4">
+      <h2 className="text-2xl md:text-3xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
+        {title} <span className="text-sm text-gray-500">• {category}</span>
+      </h2>
+
+      <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-lg font-sans max-w-3xl mx-auto mb-6">
+        {description}
+      </p>
+
+      {image && (
+        <img
+          src={image}
+          alt={`${title} visual`}
+          height="500"
+          width="500"
+          className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
+        />
+      )}
+    </div>
   );
 };
 
 const data = [
   {
-    category: "Artificial Intelligence",
-    title: "You can do more with AI.",
-    src: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=3556&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    content: <DummyContent />,
+    category: "312 Songs",
+    title: "Hip Hop.",
+    src: MusicCover1,
+    content: (
+      <DummyContent
+        title="Hip Hop Essentials"
+        category="312 Songs"
+        description={
+          "A deep dive into iconic beats and lyricism — curated for hip hop heads. Explore classic albums, exclusive interviews, and fresh playlists to keep your head nodding."
+        }
+        image={MusicCover1}
+      />
+    ),
   },
   {
-    category: "Productivity",
-    title: "Enhance your productivity.",
-    src: "https://images.unsplash.com/photo-1531554694128-c4c6665f59c2?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    content: <DummyContent />,
+    category: "814 Songs",
+    title: "Soul.",
+    src: MusicCover2,
+    content: (
+      <DummyContent
+        title="Soul Vibes"
+        category="814 Songs"
+        description={
+          "Smooth vocals and warm instrumentation — perfect for relaxed evenings. Discover hidden gems and essential soul records from across the decades."
+        }
+        image={MusicCover2}
+      />
+    ),
   },
   {
-    category: "Product",
-    title: "Launching the new Apple Vision Pro.",
-    src: "https://images.unsplash.com/photo-1713869791518-a770879e60dc?q=80&w=2333&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    content: <DummyContent />,
+    category: "375 Songs",
+    title: "Summer Hits",
+    src: MusicCover3,
+    content: (
+      <DummyContent
+        title="Summer Hits"
+        category="375 Songs"
+        description={
+          "Sun-soaked anthems and beach-ready bangers to make every day feel like a vacation. Curated for pool parties and road trips."
+        }
+        image={MusicCover3}
+      />
+    ),
   },
 
   {
-    category: "Product",
-    title: "Maps for your iPhone 15 Pro Max.",
-    src: "https://images.unsplash.com/photo-1599202860130-f600f4948364?q=80&w=2515&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    content: <DummyContent />,
+    category: "731 Songs",
+    title: "R&B.",
+    src: MusicCover4,
+    content: (
+      <DummyContent
+        title="R&B Classics"
+        category="731 Songs"
+        description={
+          "Soulful melodies and timeless grooves — from slow jams to contemporary R&B. Handpicked tracks for romance and late-night drives."
+        }
+        image={MusicCover4}
+      />
+    ),
   },
   {
-    category: "iOS",
-    title: "Photography just got better.",
-    src: "https://images.unsplash.com/photo-1602081957921-9137a5d6eaee?q=80&w=2793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    content: <DummyContent />,
+    category: "492 Songs",
+    title: "AfroBeats.",
+    src: MusicCover5,
+    content: (
+      <DummyContent
+        title="AfroBeats Pulse"
+        category="492 Songs"
+        description={
+          "High-energy rhythms and vibrant melodies from across Africa. Dancefloor-ready tracks and rising stars you need to hear."
+        }
+        image={MusicCover5}
+      />
+    ),
   },
   {
-    category: "Hiring",
-    title: "Hiring for a Staff Software Engineer",
-    src: "https://images.unsplash.com/photo-1511984804822-e16ba72f5848?q=80&w=2048&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    content: <DummyContent />,
+    category: "240 Songs",
+    title: "Amapiano",
+    src: MusicCover6,
+    content: (
+      <DummyContent
+        title="Amapiano Grooves"
+        category="240 Songs"
+        description={
+          "Amapiano's signature log-drum patterns and chilled atmospheres — the freshest cuts and essential classics."
+        }
+        image={MusicCover6}
+      />
+    ),
   },
 ];
 

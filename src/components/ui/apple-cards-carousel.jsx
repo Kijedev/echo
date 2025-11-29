@@ -14,6 +14,7 @@ import {
 import { cn } from "../../lib/utils";
 import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "../../hooks/useOutsideClick";
+import { FaCirclePlay } from "react-icons/fa6";
 
 export const CarouselContext = createContext({
   onCardClose: () => {},
@@ -81,7 +82,6 @@ export const Carousel = ({ items, initialScroll = 0 }) => {
             onClick={scrollLeft}
             disabled={!canScrollLeft}
           >
-            
             <IconArrowNarrowLeft className="h-6 w-6 text-white" />
           </button>
           <button
@@ -181,7 +181,7 @@ export const Card = ({ card, index, layout = false }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 h-full w-full bg-black/80 backdrop-blur-lg"
+              className="fixed inset-0 h-full w-full bg-black/30 backdrop-blur-lg"
             />
             <motion.div
               initial={{ opacity: 0 }}
@@ -189,13 +189,13 @@ export const Card = ({ card, index, layout = false }) => {
               exit={{ opacity: 0 }}
               ref={containerRef}
               layoutId={layout ? `card-${card.title}` : undefined}
-              className="relative z-60 mx-auto my-10 h-fit max-w-5xl rounded-3xl bg-white p-4 font-sans md:p-10 dark:bg-neutral-900"
+              className="relative z-60 mx-auto my-10 h-fit max-w-5xl rounded-3xl bg-white p-4 font-sans md:p-10 dark:bg-[#0A0C10]"
             >
               <button
                 className="sticky top-4 right-0 ml-auto flex h-8 w-8 items-center justify-center rounded-full bg-black dark:bg-white"
                 onClick={handleClose}
               >
-                <IconX className="h-6 w-6 text-neutral-100 dark:text-neutral-900" />
+                <IconX className="h-6 w-6 text-neutral-100 dark:text-neutral-900 cursor-pointer" />
               </button>
               <motion.p
                 layoutId={layout ? `category-${card.title}` : undefined}
@@ -214,26 +214,31 @@ export const Card = ({ card, index, layout = false }) => {
           </div>
         )}
       </AnimatePresence>
+
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
-        onClick={handleOpen}
-        className="relative z-10 flex h-80 w-56 flex-col items-start justify-start overflow-hidden rounded-3xl bg-gray-100 md:h-160 md:w-96 dark:bg-neutral-900"
+        // onClick={handleOpen}
+        className="cursor-pointer relative z-10 flex h-80 w-56 flex-col items-center justify-center overflow-hidden rounded-3xl bg-gray-100 md:h-110 md:w-96 dark:bg-neutral-900"
       >
-        <div className="pointer-events-none absolute inset-x-0 top-0 z-30 h-full bg-linear-to-b from-black/50 via-transparent to-transparent" />
-        <div className="relative z-40 p-8">
-          <motion.p
-            layoutId={layout ? `category-${card.category}` : undefined}
-            className="text-left font-sans text-sm font-medium text-white md:text-base"
-          >
-            {card.category}
-          </motion.p>
+        <div className="pointer-events-none absolute inset-x-0 top-0 z-30 h-full bg-linear-to-b from-black/20 via-black/60 to-black" />
+        <div className="absolute z-40 p-8 bottom-0">
+          <motion.button className="cursor-pointer" onClick={handleOpen}>
+            <FaCirclePlay className="text-white text-5xl" />
+          </motion.button>
           <motion.p
             layoutId={layout ? `title-${card.title}` : undefined}
-            className="mt-2 max-w-xs text-left font-sans text-xl font-semibold text-balance text-white md:text-3xl"
+            className="mt-2 max-w-xs text-center text-x2l font-extrabold text-balance text-white md:text-3xl"
           >
             {card.title}
           </motion.p>
+          <motion.p
+            layoutId={layout ? `category-${card.category}` : undefined}
+            className="text-center text-sm text-[#8F9092] md:text-base mt-4"
+          >
+            {card.category}
+          </motion.p>
         </div>
+
         <BlurImage
           src={card.src}
           alt={card.title}
@@ -241,6 +246,8 @@ export const Card = ({ card, index, layout = false }) => {
           className="absolute inset-0 z-10 object-cover"
         />
       </motion.button>
+
+      <div className="mt-10 lg:bg-white/16 lg:shadow-2xl lg:blur-xl h-[30px] lg:w-[360px]"></div>
     </>
   );
 };
