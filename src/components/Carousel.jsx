@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 import { Carousel, Card } from "../components/ui/apple-cards-carousel";
 import MusicCover1 from "../Img/MusicCover1.svg";
 import MusicCover2 from "../Img/MusicCover2.svg";
@@ -15,7 +16,13 @@ const AppleCardsCarouselDemo = () => {
   ));
 
   return (
-    <div className="w-full h-full py-10">
+    <motion.div
+      className="w-full h-full py-10"
+      initial={{ opacity: 0, y: -20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
       <div className="flex flex-col gap-5 lg:pl-32 px-5">
         <h1 className="lg:text-[5rem] text-[2rem] lg:leading-20 leading-10 font-extrabold bg-linear-to-b from-[#FFFFFF] to-[#8F9092] bg-clip-text text-transparent">
           Explore Endless <br /> Music Libraries
@@ -26,7 +33,7 @@ const AppleCardsCarouselDemo = () => {
         </p>
       </div>
       <Carousel items={cards} />
-    </div>
+    </motion.div>
   );
 };
 

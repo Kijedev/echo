@@ -1,12 +1,26 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Headphones from "../Img/headphones.png";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } },
+};
 
 const FooterCard = () => {
   return (
     <div className="w-full flex justify-center items-center py-6 sm:py-10 bg-linear-to-b from-[#0A0C10] to-transparent">
-      <div className="bg-linear-to-b from-[#872064] via-[#441537] to-transparent relative w-[95%] sm:w-[90%] max-w-6xl rounded-lg sm:rounded-2xl lg:rounded-[30px] overflow-hidden flex flex-col lg:flex-row items-center justify-between px-4 sm:px-8 lg:px-16 py-8 sm:py-12 lg:py-20 gap-6 sm:gap-8 lg:gap-0">
+      <motion.div
+        className="bg-linear-to-b from-[#872064] via-[#441537] to-transparent relative w-[95%] sm:w-[90%] max-w-6xl rounded-lg sm:rounded-2xl lg:rounded-[30px] overflow-hidden flex flex-col lg:flex-row items-center justify-between px-4 sm:px-8 lg:px-16 py-8 sm:py-12 lg:py-20 gap-6 sm:gap-8 lg:gap-0"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
         {/* Left Text Section */}
-        <div className="w-full lg:w-auto max-w-xl">
+        <motion.div
+          className="w-full lg:w-auto max-w-xl"
+          variants={fadeInUp}
+        >
           <h1 className="bg-linear-to-b from-[#FFFFFF] to-[#BA9EB2] bg-clip-text text-transparent text-3xl sm:text-4xl lg:text-6xl font-extrabold lg:leading-14 leading-8">
             Do not Miss A<br />
             Beat!
@@ -21,7 +35,10 @@ const FooterCard = () => {
           </p>
 
           {/* Email Input */}
-          <div className="flex flex-row items-center gap-2 sm:gap-4 mt-6 sm:mt-10">
+          <motion.div
+            className="flex flex-row items-center gap-2 sm:gap-4 mt-6 sm:mt-10"
+            variants={fadeInUp}
+          >
             <input
               type="email"
               placeholder="Email"
@@ -48,18 +65,21 @@ const FooterCard = () => {
                 </svg>
               </button>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Headphone Image */}
-        <div className="shrink-0 w-full sm:w-60 lg:w-[420px]">
+        <motion.div
+          className="shrink-0 w-full sm:w-60 lg:w-[420px]"
+          variants={fadeInUp}
+        >
           <img
             src={Headphones}
             alt="Headphones"
             className="w-full h-auto object-contain drop-shadow-2xl"
           />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };
