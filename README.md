@@ -1,16 +1,81 @@
-# React + Vite
+Echo — Music Discovery Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Echo is a modern, visually immersive music exploration website built with React, Tailwind CSS, and Framer Motion.
+It focuses on delivering smooth interactions, beautiful animations, and a clean UI that helps users discover, explore, and enjoy music content seamlessly.
 
-Currently, two official plugins are available:
+🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React – Component-based architecture for building dynamic UIs
 
-## React Compiler
+Tailwind CSS – Utility-first CSS framework for fast styling
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Framer Motion – Smooth page transitions, animations, and interactive motion effects
 
-## Expanding the ESLint configuration
+🎧 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🎵 Explore Music Libraries — Browse curated music categories
+
+🔍 Search Interface — Find songs, artists, genres, and more
+
+🎨 Modern UI — Gradient text, smooth shadows, and responsive layouts
+
+✨ Animations Everywhere — Fade-ins, stagger effects, scroll interactions
+
+📱 Fully Responsive — Optimized for mobile, tablets, and desktops
+
+📂 Project Structure
+echo/
+├── src/
+│   ├── components/   # Reusable UI components
+│   ├── pages/        # App screens and sections
+│   ├── assets/       # Images, icons
+│   ├── App.jsx
+│   └── main.jsx
+├── public/
+└── package.json
+
+🛠️ Install & Run Locally
+
+Make sure you have Node.js installed.
+
+1️⃣ Clone the project
+git clone https://github.com/yourusername/echo.git
+cd echo
+
+2️⃣ Install dependencies
+npm install
+
+3️⃣ Start development server
+npm run dev
+
+4️⃣ Build for production
+npm run build
+
+🎬 Animations
+
+Echo uses Framer Motion for:
+
+Section fade-ins
+
+Smooth hero transitions
+
+Hover animations
+
+Background motion effects
+
+📦 Dependencies
+
+Key packages:
+
+"react": "^18.x",
+"framer-motion": "^10.x",
+"tailwindcss": "^3.x",
+
+🤝 Contributing
+
+Contributions are welcome!
+Open an issue or create a pull request if you'd like to improve the project.
+
+📜 License
+
+This project is licensed under the MIT License.
