@@ -6,6 +6,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Add this inside your global CSS file */
 .img-fade-bottom {
   mask-image: linear-gradient(to bottom, black 50%, transparent 100%);

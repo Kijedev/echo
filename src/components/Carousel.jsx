@@ -18,6 +18,7 @@ const AppleCardsCarouselDemo = () => {
   return (
     <motion.div
       className="w-full h-full py-10"
+      id="Explore"
       initial={{ opacity: 0, y: -20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}

@@ -16,9 +16,8 @@ export default function Home() {
   ];
 
   return (
-    <main className="min-h-screen bg-linear-to-b from-[#0A0C10] via-[#162D4C] to-[#0A0C10]">
+    <main className="min-h-screen bg-linear-to-b from-[#0A0C10] via-[#162D4C] to-[#0A0C10]" id="Trending">
       <div className="px-4 sm:px-6 lg:px-10">
-
         {/* Header Section */}
         <motion.div
           className="text-center mb-12"

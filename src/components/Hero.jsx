@@ -11,6 +11,7 @@ const Hero = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.2, ease: "easeOut" }}
       className="relative w-full bg-[#0A0C10] text-white overflow-hidden"
+      id="Home"
     >
       {/* PAGE CONTENT */}
       <div className="relative z-10 px-4 sm:px-8 lg:px-32 py-12 flex flex-col lg:flex-row lg:justify-center items-center justify-between gap-8 lg:gap-0">

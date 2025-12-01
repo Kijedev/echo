@@ -32,9 +32,10 @@ const Tracks = () => {
   ];
 
   return (
-    <section className="relative w-full py-20 px-6 md:px-12 bg-linear-to-b from-[#0A0C10] via-pink-600/30 to-[#0A0C10] overflow-hidden">
-
-      {/* ==================== TITLE / HEADER ANIMATION ==================== */}
+    <section
+      className="relative w-full py-20 px-6 md:px-12 bg-linear-to-b from-[#0A0C10] via-pink-600/30 to-[#0A0C10] overflow-hidden"
+      id="Tracks"
+    >
       <motion.div
         className="flex flex-col justify-center items-center lg:gap-8 gap-4 text-center px-4 sm:px-8 lg:px-32 pb-12 relative z-10"
         initial={{ opacity: 0, y: -20 }}
@@ -88,7 +89,7 @@ const Tracks = () => {
             }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             whileHover={{ scale: 1.03 }}
-            className={`cursor-pointer bg-linear-to-b from-white/10 to-transparent border border-white/5 p-6 rounded-3xl shadow-xl backdrop-blur-xl flex flex-col items-center transition ${
+            className={`cursor-pointer bg-linear-to-b from-white/10 to-transparent border border-white/5 p-6 rounded-3xl shadow-xl backdrop-blur-xl flex flex-col items-center hover:-translate-y-6 duration-500 ease-in-out transition ${
               song.id === 2 ? "lg:-translate-y-16" : ""
             }`}
           >
@@ -123,7 +124,9 @@ const Tracks = () => {
               transition={{ delay: 0.3, duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-white text-xl font-extrabold">{song.title}</h2>
+              <h2 className="text-white text-xl font-extrabold">
+                {song.title}
+              </h2>
               <p className="text-[#777] text-sm mt-1">{song.artist}</p>
 
               <motion.div

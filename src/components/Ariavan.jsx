@@ -16,7 +16,10 @@ const fadeInUp = {
 
 const Ariavan = () => {
   return (
-    <section className="relative w-full min-h-screen px-4 sm:px-6 md:px-8 lg:px-12 bg-linear-to-b from-[#0A0C10] to-transparent overflow-hidden flex items-center py-12 sm:py-16 lg:py-[25%]">
+    <section
+      className="relative w-full min-h-screen px-4 sm:px-6 md:px-8 lg:px-12 bg-linear-to-b from-[#0A0C10] to-transparent overflow-hidden flex items-center py-12 sm:py-16 lg:py-[23%]"
+      id="Artists"
+    >
       {/* Background blur */}
       <div className="hidden lg:block bg-[#0A0C10] w-[400px] h-[500px] relative top-0 blur-[200px]"></div>
       <div className="absolute top-72 left-0 w-[600px] h-[600px] bg-[#801F60] blur-[140px] rounded-full"></div>
